@@ -9,7 +9,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 
 const client = new ApolloClient({
   // uri: 'https://flyby-router-demo.herokuapp.com/',
-  // uri: 'https://flyby-router-demo.herokuapp.com/',
   uri:'https://rickandmortyapi.com/graphql',
   cache: new InMemoryCache(),
 });

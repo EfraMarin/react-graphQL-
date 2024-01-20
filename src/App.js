@@ -18,7 +18,7 @@ function App() {
 
     if (loading) return <p>Loading...</p>;
     if (error) return <p>Error : {error.message}</p>;
-    console.log(data.characters.results);
+    // console.log(data.characters.results);
 
     return data.characters.results.map(({ name, species, id, image }) => (
       <div key={id}>
