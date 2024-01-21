@@ -13,7 +13,7 @@ function App() {
   }
 `;
 
-  function DisplayLocations() {
+  function DisplayCharacters() {
     const { loading, error, data } = useQuery(GET_LOCATIONS);
 
     if (loading) return <p>Loading...</p>;
@@ -23,9 +23,9 @@ function App() {
     return data.characters.results.map(({ name, species, id, image }) => (
       <div key={id}>
         <h3>{name}</h3>
-        <img width="400" height="250" alt="location-reference" src={`${image}`} />
+        <img width="200" height="200" alt="character-reference" src={`${image}`} />
         <br />
-        <b>About this location:</b>
+        <b>About this character:</b>
         <p>{species}</p>
         <br />
       </div>
@@ -36,7 +36,9 @@ function App() {
     <div>
       <h2>My first Apollo app 🚀</h2>
       <br />
-      <DisplayLocations />
+      <div className='character-container'>
+        <DisplayCharacters />
+      </div>
     </div>
   );
 }
